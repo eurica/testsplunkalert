@@ -1,0 +1,72 @@
+<form class="form-horizontal form-complex">
+    <div class="control-group">
+        <label class="control-label" for="service_key">Service Key</label>
+
+        <div class="controls">
+            <input type="text" name="action.hipchat.param.service_key" id="service_key" />
+            <span class="help-block">A unique 32 character string for each service.</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hipchat_room">Room</label>
+
+        <div class="controls">
+            <input type="text" name="action.hipchat.param.room" id="hipchat_room" />
+            <span class="help-block">Enter the name of the HipChat room to send the notification to</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hipchat_message">Message</label>
+
+        <div class="controls">
+            <textarea name="action.hipchat.param.message" id="hipchat_message" style="height: 120px;"></textarea>
+            <span class="help-block">
+                Enter the chat message to send to the HipChat room.
+                The message can include tokens that insert text based on the results of the search.
+                <a href="{{SPLUNKWEB_URL_PREFIX}}/help?location=learnmore.alert.action.tokens" target="_blank"
+                   title="Splunk help">Learn More <i class="icon-external"></i></a>
+            </span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Message Format</label>
+
+        <div class="controls">
+            <label class="radio" for="hipchat_message_format_plain">
+                <input id="hipchat_message_format_plain" type="radio" name="action.hipchat.param.message_format" value="plain" />
+                Plain Text
+            </label>
+            <label class="radio" for="hipchat_message_format_html">
+                <input id="hipchat_message_format_html" type="radio" name="action.hipchat.param.message_format" value="html" />
+                HTML
+            </label>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hipchat_color">Incident urgency</label>
+
+        <div class="controls">
+            <select id="hipchat_color" name="action.hipchat.param.urgency">
+                <option value="high">High</option>
+                <option value="low">Low</option>
+            </select>
+            <span class="help-block">The urgency of any incidents created by this action.</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox" for="hipchat_notify">
+                <input type="checkbox" name="action.hipchat.param.notify" id="hipchat_notify" value="1"/>
+                Notify users in the room
+            </label>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="hipchat_auth_token">Auth Token</label>
+
+        <div class="controls">
+            <input type="text" name="action.hipchat.param.auth_token" id="hipchat_auth_token" placeholder="Optional"/>
+            <span class="help-block">Override the globally configured HipChat Auth Token for this alert (optional).</span>
+        </div>
+    </div>
+</form>

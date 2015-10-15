@@ -1,0 +1,7 @@
+[alert_actions/hipchat]
+version = 6.3.0
+modtime = 1444078728.983982000
+
+[app/install/is_configured]
+version = 6.3.0
+modtime = 1444078728.994194000
