@@ -6,3 +6,5 @@ param.base_url = <string>
 param.auth_token = <string>
 * HipChat OAuth2 token 
 * see https://www.hipchat.com/docs/apiv2/auth
+
+* Adding a comment
